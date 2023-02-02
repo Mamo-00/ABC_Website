@@ -12,14 +12,14 @@ function toggleSidebar() {
   }
 }
 
-let backButton;
+/* let backButton;
 
 document.addEventListener("DOMContentLoaded", function() {
   backButton = document.getElementById("back-button");
-});
+}); */
 
 document.addEventListener("DOMContentLoaded", function() {
-  
+  let backButton = document.getElementById("back-button");
   console.log(backButton);
   if (window.history.length > 1) {
     backButton.classList.remove("hidden");
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 console.log(window.history.length);
 
 window.addEventListener("popstate", function() {
-  
+  let backButton = document.getElementById("back-button");
   console.log(backButton);
   console.log("why it not work no? yes? oh it works!");
   if (window.history.length <= 1) {
